@@ -8,10 +8,11 @@ fun main() {
         // This is a scope
         launch {
             // This is a child scope
-            log("Before waiting")
+            log("Before doing hard work")
             hardWork()
-            log("After waiting")
+            log("After the hard work")
         }
+        delay(500)
         log("Hello world!")
     }
 }

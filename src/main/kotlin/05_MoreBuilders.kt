@@ -27,7 +27,7 @@ fun mainCoroutinesScope() {
 private suspend fun hardWork() {
     log("Before scope")
     coroutineScope {
-        launch {
+        launch(Dispatchers.Default) {
             log("Before waiting coroutine 1")
             delay(2000)
             log("After waiting coroutine 1")

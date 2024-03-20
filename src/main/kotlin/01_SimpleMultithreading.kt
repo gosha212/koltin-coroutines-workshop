@@ -16,7 +16,8 @@ fun main() {
 
 private fun executeOnMainThread(action: () -> Unit) {
     log("Executing on main thread")
-    // In Android we have the Handler class to post actions to the main thread
+    // In Android we have the Handler class to post actions to the main thread.
+    // In native kotlin there is no build mechanism with looper so we assume that the main thread is the current thread.
     action()
 }
 
